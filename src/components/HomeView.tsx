@@ -105,6 +105,64 @@ export const HomeView: React.FC<HomeViewProps> = ({
     setView('catalog');
   };
 
+  const PARTNERS_LIST = [
+    {
+      name: 'NVIDIA',
+      render: () => (
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg"
+          alt="NVIDIA"
+          className="h-7 md:h-8 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+          referrerPolicy="no-referrer"
+        />
+      )
+    },
+    {
+      name: 'Intel',
+      render: () => (
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel_Core_logo_%282020%29.svg"
+          alt="Intel Core"
+          className="h-8 md:h-10 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+          referrerPolicy="no-referrer"
+        />
+      )
+    },
+    {
+      name: 'AMD',
+      render: () => (
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg"
+          alt="AMD"
+          className="h-6 md:h-7 w-auto object-contain brightness-0 invert transition-all duration-300 group-hover:scale-105"
+          referrerPolicy="no-referrer"
+        />
+      )
+    },
+    {
+      name: 'ASUS ROG',
+      render: () => (
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Asus_ROG_Logo.svg"
+          alt="ASUS ROG"
+          className="h-8 md:h-9 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+          referrerPolicy="no-referrer"
+        />
+      )
+    },
+    {
+      name: 'Apple',
+      render: () => (
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+          alt="Apple"
+          className="h-6 md:h-7 w-auto object-contain brightness-0 invert transition-all duration-300 group-hover:scale-105"
+          referrerPolicy="no-referrer"
+        />
+      )
+    }
+  ];
+
   return (
     <div className="space-y-20 pb-20 overflow-hidden" id="home-view-wrapper" ref={containerRef}>
       
@@ -210,42 +268,16 @@ export const HomeView: React.FC<HomeViewProps> = ({
           {/* Ticker Row */}
           <div className="animate-marquee flex gap-8 md:gap-16 items-center">
             {/* First Set */}
-            {[
-              { name: 'NVIDIA', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg', size: 'h-6 md:h-7' },
-              { name: 'Intel Core', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel_Core_logo_%282020%29.svg', size: 'h-7 md:h-8' },
-              { name: 'AMD', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg', size: 'h-5 md:h-6' },
-              { name: 'ASUS ROG', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Asus_ROG_Logo.svg', size: 'h-8 md:h-10' },
-              { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', size: 'h-6 md:h-7', invert: true },
-            ].map((partner, i) => (
+            {PARTNERS_LIST.map((partner, i) => (
               <div key={`p1-${i}`} className="gsap-partner-item flex items-center justify-center bg-slate-900/40 border border-slate-800/60 px-6 py-3.5 rounded-2xl opacity-50 hover:opacity-100 hover:bg-slate-900/80 hover:border-yellow-500/30 transition-all duration-300 shrink-0 shadow-md group">
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name} 
-                  className={`${partner.size} w-auto object-contain transition-all duration-300 ${
-                    partner.invert ? 'filter brightness-0 invert' : 'filter brightness-0 invert group-hover:filter-none'
-                  }`} 
-                  referrerPolicy="no-referrer"
-                />
+                {partner.render()}
               </div>
             ))}
             
             {/* Second Set (Duplicate for seamless loop) */}
-            {[
-              { name: 'NVIDIA', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg', size: 'h-6 md:h-7' },
-              { name: 'Intel Core', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel_Core_logo_%282020%29.svg', size: 'h-7 md:h-8' },
-              { name: 'AMD', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg', size: 'h-5 md:h-6' },
-              { name: 'ASUS ROG', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Asus_ROG_Logo.svg', size: 'h-8 md:h-10' },
-              { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', size: 'h-6 md:h-7', invert: true },
-            ].map((partner, i) => (
+            {PARTNERS_LIST.map((partner, i) => (
               <div key={`p2-${i}`} className="gsap-partner-item flex items-center justify-center bg-slate-900/40 border border-slate-800/60 px-6 py-3.5 rounded-2xl opacity-50 hover:opacity-100 hover:bg-slate-900/80 hover:border-yellow-500/30 transition-all duration-300 shrink-0 shadow-md group">
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name} 
-                  className={`${partner.size} w-auto object-contain transition-all duration-300 ${
-                    partner.invert ? 'filter brightness-0 invert' : 'filter brightness-0 invert group-hover:filter-none'
-                  }`} 
-                  referrerPolicy="no-referrer"
-                />
+                {partner.render()}
               </div>
             ))}
           </div>
