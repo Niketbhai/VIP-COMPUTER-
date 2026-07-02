@@ -109,56 +109,59 @@ export const HomeView: React.FC<HomeViewProps> = ({
     {
       name: 'NVIDIA',
       render: () => (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg"
-          alt="NVIDIA"
-          className="h-7 md:h-8 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-          referrerPolicy="no-referrer"
-        />
+        <svg className="h-6 md:h-7 w-auto transition-all duration-300 group-hover:scale-105" viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#76B900">
+            <path d="M14 2C7.38 2 2 7.38 2 14s5.38 12 12 12c5.3 0 9.77-3.44 11.3-8.15l-3.03-.88C21.1 21.64 17.86 24 14 24c-5.52 0-10-4.48-10-10s4.48-10 10-10c3.5 0 6.55 1.8 8.35 4.54l2.5-1.78C22.62 3.86 18.57 2 14 2z"/>
+            <path d="M14 6c-4.42 0-8 3.58-8 8s3.58 8 8 8c3.2 0 5.95-1.88 7.2-4.6l-2.67-.78C17.7 18.42 15.98 19.5 14 19.5c-3.04 0-5.5-2.46-5.5-5.5s2.46-5.5 5.5-5.5c1.78 0 3.34.85 4.34 2.16l2.17-1.55C18.98 7.3 16.63 6 14 6z"/>
+            <path d="M14 10c-2.21 0-4 1.79-4 4s1.79 4 4 4c1.32 0 2.48-.64 3.2-1.63l-2.18-.63c-.27.46-.74.76-1.28.76-1.1 0-2-.9-2-2s.9-2 2-2c.45 0 .86.15 1.18.4l1.83-1.3C16.48 10.63 15.32 10 14 10z"/>
+          </g>
+          <text x="32" y="19" className="font-sans font-black tracking-[0.18em] text-[12px] fill-white" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>NVIDIA</text>
+        </svg>
       )
     },
     {
       name: 'Intel',
       render: () => (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel_Core_logo_%282020%29.svg"
-          alt="Intel Core"
-          className="h-8 md:h-10 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-          referrerPolicy="no-referrer"
-        />
+        <svg className="h-6 md:h-7 w-auto transition-all duration-300 group-hover:scale-105" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="2" y="17" className="font-sans font-black text-[16px] fill-blue-400 italic lowercase" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>intel</text>
+          <text x="44" y="16" className="font-sans font-light text-[10px] fill-white tracking-widest uppercase" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>CORE</text>
+          <path d="M 2 23 C 25 27, 65 27, 95 23" stroke="#0071C5" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        </svg>
       )
     },
     {
       name: 'AMD',
       render: () => (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg"
-          alt="AMD"
-          className="h-6 md:h-7 w-auto object-contain brightness-0 invert transition-all duration-300 group-hover:scale-105"
-          referrerPolicy="no-referrer"
-        />
+        <svg className="h-5 md:h-6 w-auto transition-all duration-300 group-hover:scale-105" viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="none">
+            <path d="M2 14 L14 2 L26 14 L20 14 L14 8 L8 14 Z" fill="#ED1C24" />
+            <path d="M20 14 L14 20 L8 14" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </g>
+          <text x="32" y="19" className="font-sans font-extrabold tracking-tight text-[16px] fill-white" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>AMD</text>
+        </svg>
       )
     },
     {
       name: 'ASUS ROG',
       render: () => (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Asus_ROG_Logo.svg"
-          alt="ASUS ROG"
-          className="h-8 md:h-9 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-          referrerPolicy="no-referrer"
-        />
+        <svg className="h-6 md:h-7 w-auto transition-all duration-300 group-hover:scale-105" viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 14 L12 3 L22 14 L17 14 L12 8 L7 14 Z" fill="#FF033E" />
+          <path d="M22 14 L15 25 L5 14 L10 14 L15 20 L19 14 Z" fill="#FF033E" />
+          <path d="M12 11 L14 14 L12 17 L10 14 Z" fill="#FFFFFF" />
+          <text x="28" y="18" className="font-sans font-black tracking-[0.2em] text-[12px] fill-white" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>ROG</text>
+          <text x="28" y="25" className="font-mono text-[5px] tracking-widest text-slate-500 uppercase" style={{ fontFamily: 'monospace' }}>REPUBLIC OF GAMERS</text>
+        </svg>
       )
     },
     {
       name: 'Apple',
       render: () => (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-          alt="Apple"
-          className="h-6 md:h-7 w-auto object-contain brightness-0 invert transition-all duration-300 group-hover:scale-105"
-          referrerPolicy="no-referrer"
-        />
+        <svg className="h-6 md:h-7 w-auto transition-all duration-300 group-hover:scale-105" viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 12.8c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8-.7 0-1.9-.7-3.1-.7-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.7 2.4 2.9 2.3 1.1-.1 1.6-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-.1 2.8-1.2.9-1.3 1.2-2.6 1.3-2.7-.1 0-2.4-.9-2.4-3.8z" fill="#FFFFFF" />
+          <path d="M12.4 5.9c.6-.8 1-1.9.9-3-.9.1-2.1.6-2.7 1.4-.5.6-1 1.7-.9 2.8 1.1.1 2.1-.4 2.7-1.2z" fill="#FFFFFF" />
+          <text x="22" y="15" className="font-sans font-bold text-[11px] fill-white" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>Apple</text>
+          <text x="22" y="23" className="font-sans text-[7px] fill-slate-500 font-medium tracking-wide" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>Silicon Integrator</text>
+        </svg>
       )
     }
   ];

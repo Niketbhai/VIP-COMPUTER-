@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HomeView } from './components/HomeView';
 import { CatalogView } from './components/CatalogView';
@@ -13,6 +13,11 @@ import { ShieldAlert, X, Lock } from 'lucide-react';
 export default function App() {
   const [currentView, setView] = useState<'home' | 'catalog' | 'builder' | 'dashboard'>('home');
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
+
+  // Automatically scroll to top whenever the page view or the selected product changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentView, selectedProductId]);
   
   // Data State
   const [products, setProducts] = useState<Product[]>(INITIAL_PRODUCTS);
